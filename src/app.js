@@ -53,7 +53,7 @@ app.get('/weather',(req,res)=>{
             error:'Please enter a address'
         })
     }
-                                             //yeh nahi denge toh error aayega kyuki destructure karne ki try karega even though error ki value hai kuch (usko nahi pata na ki error ko value de di hai humne) 
+    //yeh nahi denge toh error aayega kyuki destructure karne ki try karega even though error ki value hai kuch (usko nahi pata na ki error ko value de di hai humne) 
     geoCode(req.query.address , (error, {longitude,latitude,location} = {} )=>{
         if(error) {
             return res.send({
