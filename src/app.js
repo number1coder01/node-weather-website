@@ -14,6 +14,8 @@ const publicDirectoryPath=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../templates/views')
 const partialsPath=path.join(__dirname,'../templates/partials')
 
+//port
+const port=process.env.PORT || 3000;
 //Setup handlebars engine and views location(Set engine and change directory path for views)
 app.set( 'view engine' , 'hbs')
 app.set('views',viewsPath)
@@ -95,7 +97,7 @@ app.get('*',(req,res)=>{
         errorName:'Page not found!'
     })
 })
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000.')
+app.listen(port,()=>{
+    console.log('Server is up on port ' + port)
 })
 
