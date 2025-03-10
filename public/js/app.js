@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit',(event)=>{
             }
             else{
                 messageOne.textContent='Fetched results for the location : ' + data.location   //manipulate the value of the para from js file 
-                messageTwo.textContent='Forecast : '+ data.forecast.temperature + data.forecast.type + data.forecast.rain
+                messageTwo.textContent='Forecast : '+ data.forecast.temperature + data.forecast.type +data.forecast.humidity + data.forecast.feelslike  + data.forecast.rain
             }
         })
     })
