@@ -28,22 +28,22 @@ app.use(express.static(publicDirectoryPath))
 app.get('',(req,res)=>{
     res.render('index',{
         title:'Weather Finder',
-        name:'Kaartik the Final Boss'
+        name:'Kaartik'
     })   //render one of our views(handlebar templates)
 })
 
 app.get('/about',(req,res)=>{
     res.render('about',{
         title:'About Page!',
-        name:'Kaartik the Final Boss'
+        name:'Kaartik'
     }) 
 })
 
 app.get('/help',(req,res)=>{
     res.render('help',{
-        helpMessage:'Help me Daddy please!',
+        helpMessage:'Help me please!',
         title:'Help Me!',
-        name:'Kaartik the Final Boss'
+        name:'Kaartik'
     })
 })
 app.get('/weather',(req,res)=>{
@@ -78,7 +78,7 @@ app.get('/weather',(req,res)=>{
 app.get('/products',(req,res)=>{
     if(!req.query.search){
         return res.send({
-            error:'You must enter a serach value'
+            error:'You must enter a search value'
         })
     }
     // console.log(req.query.search)
