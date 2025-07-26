@@ -24,10 +24,9 @@ hbs.registerPartials(partialsPath)
 //Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
-
 app.get('',(req,res)=>{
     res.render('index',{
-        title:'Weather Finder',
+        title:'WEATHER FINDER',
         name:'Kaartik'
     })   //render one of our views(handlebar templates)
 })
@@ -41,7 +40,7 @@ app.get('/about',(req,res)=>{
 
 app.get('/help',(req,res)=>{
     res.render('help',{
-        helpMessage:'Help me please!',
+        helpMessage:'Help page under construction!',
         title:'Help Me!',
         name:'Kaartik'
     })
