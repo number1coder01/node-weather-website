@@ -14,8 +14,8 @@ const forecast = (latitude,longitude,callback) => {
                 type: body.current.weather_descriptions[0]+' is the current weather type.',
                 temperature:'It is '+body.current.temperature+' degrees out there.',
                 humidity:'There is ' +body.current.humidity + '% humidity.',
-                feelslike:'But it feels like'+ body.current.feelslike + ' temperature in here.',
-                rain:'There is  '+body.current.precip+'% chance of rain.'
+                feelslike:'But it feels like '+ body.current.feelslike + ' degrees in here.',
+                rain:'There is '+body.current.precip+'% chance of rain.'
             })
         }   
     })

@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #83a4d4, #b6fbff);
@@ -167,8 +166,6 @@ body {
   color: #444;
 }
 
-
-
 .result {
   margin-top: 24px;
   font-size: 16px;
@@ -213,5 +210,6 @@ body {
 .weather-info p {
   margin: 4px 0;
 }
+
 
 

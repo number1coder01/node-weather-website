@@ -16,6 +16,7 @@ const partialsPath=path.join(__dirname,'../templates/partials')
 
 //port
 const port=process.env.PORT || 3000;
+
 //Setup handlebars engine and views location(Set engine and change directory path for views)
 app.set( 'view engine' , 'hbs')
 app.set('views',viewsPath)
@@ -73,29 +74,18 @@ app.get('/weather',(req,res)=>{
     })
 })
 
-//query string inside search bar mei after url just type ?key=value
-app.get('/products',(req,res)=>{
-    if(!req.query.search){
-        return res.send({
-            error:'You must enter a search value'
-        })
-    }
-    // console.log(req.query.search)
-    res.send({
-        products:{}
-    })
-})
-
 app.get(('/help/*'),(req,res)=>{
     res.render('error',{
         errorName:'Help article not found'
     })
 })
+
 app.get('*',(req,res)=>{
     res.render('error',{
         errorName:'Page not found!'
     })
 })
+
 app.listen(port,()=>{
     console.log('Server is up on port ' + port)
 })

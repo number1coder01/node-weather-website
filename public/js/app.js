@@ -1,3 +1,4 @@
+// client side js 
 const weatherForm = document.querySelector("form");
 const searchElement = document.querySelector("input");
 const messageOne = document.querySelector("#message-1");
@@ -10,6 +11,7 @@ weatherForm.addEventListener("submit", (event) => {
   const location = searchElement.value;
   messageOne.textContent = "⏳ Loading result...";
   messageTwo.textContent = "";
+  // fetch (req  , res) -> client side se server side par request bheji  
   fetch("/weather?address=" + encodeURIComponent(location)).then((response) => {
     response.json().then((data) => {
       if (data.error) {
